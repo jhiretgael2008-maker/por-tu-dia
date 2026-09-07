@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Raquel 💗</title>
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Georgia,serif;background:#050510;color:white}
+body{overflow-x:hidden} canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+section{min-height:100vh;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:28px 18px}
+.hidden{display:none!important}
+.intro{text-align:center;flex-direction:column}
+.intro h1{font-size:clamp(2rem,9vw,4.2rem);margin:0 0 18px;opacity:0;transform:translateY(25px);animation:show 1.5s .4s forwards}
+.intro p{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.6;max-width:650px;opacity:0;animation:show 1.3s 2s forwards}
+button{border:1px solid #ff9acb;background:rgba(255,105,180,.12);color:white;border-radius:999px;padding:13px 24px;font-size:1rem;cursor:pointer;opacity:0;animation:show 1s 3.4s forwards}
+button:active{transform:scale(.96)}
+.card{max-width:680px;width:100%;padding:30px 24px;border:1px solid rgba(255,170,210,.45);border-radius:24px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);box-shadow:0 0 40px rgba(255,80,170,.16);text-align:center}
+.card h2{font-size:clamp(1.8rem,8vw,3rem);margin-top:0}.card p{font-size:1.12rem;line-height:1.8}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:700px;width:100%}
+.photo{background:#fff;padding:8px 8px 24px;color:#222;box-shadow:0 10px 28px #0008;transform:rotate(var(--r));animation:pop .8s both;border-radius:2px}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#ddd;display:block}
+.photo span{display:block;text-align:center;margin-top:8px;font-family:cursive}
+.heart-wrap{width:min(92vw,700px);height:min(92vw,700px);position:relative}
+.heart-title{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(1.2rem,5vw,2rem);text-shadow:0 0 15px #ff78bd;z-index:2}
+.mini{position:absolute;width:72px;height:72px;background:#fff;padding:4px;box-shadow:0 0 16px rgba(255,120,190,.45);animation:float 3s ease-in-out infinite}
+.mini img{width:100%;height:100%;object-fit:cover;background:#ddd}
+@keyframes show{to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.4) rotate(var(--r))}to{opacity:1;transform:scale(1) rotate(var(--r))}}
+@keyframes float{50%{transform:translateY(-7px) scale(1.04)}}
+@media(max-width:500px){.gallery{gap:10px}.mini{width:52px;height:52px}.card{padding:25px 18px}.card p{font-size:1rem}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<section class="intro" id="intro">
+  <h1>¡Llegó, llegó, llegó el día! 💗</h1>
+  <p>Estás de cumpleaños nuevamente y ahora son tus 18,<br>que la pases hermoso. ✨</p>
+  <button onclick="next('letter')">Continuar 💕</button>
+</section>
+
+<section id="letter" class="hidden">
+  <div class="card">
+    <h2>Raquel 💗</h2>
+    <p>
+      Hoy es un día especial porque celebramos tus 18 años.
+      Espero que la pases increíble, que recibas mucho cariño
+      y que este nuevo año de tu vida venga lleno de momentos
+      bonitos, risas y recuerdos que valga la pena guardar.
+    </p>
+    <p>Gracias por ser una amiga tan cercana. 🫶</p>
+    <button onclick="next('photos')">Ver nuestros recuerdos 📸</button>
+  </div>
+</section>
+
+<section id="photos" class="hidden">
+  <div style="width:100%;max-width:700px;text-align:center">
+    <h2>Algunos recuerdos 💞</h2>
+    <div class="gallery">
+      <div class="photo" style="--r:-4deg;animation-delay:.1s"><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80"><span>✨ Para ti</span></div>
+      <div class="photo" style="--r:3deg;animation-delay:.25s"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80"><span>🌸 Un día bonito</span></div>
+      <div class="photo" style="--r:5deg;animation-delay:.4s"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80"><span>🎈 A celebrar</span></div>
+      <div class="photo" style="--r:-3deg;animation-delay:.55s"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"><span>💗 Momentos</span></div>
+      <div class="photo" style="--r:-5deg;animation-delay:.7s"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"><span>🌊 Nuevos recuerdos</span></div>
+      <div class="photo" style="--r:4deg;animation-delay:.85s"><img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=600&q=80"><span>🎂 Tus 18</span></div>
+    </div>
+    <button style="margin-top:24px;animation-delay:1.5s" onclick="next('heart')">Una última sorpresa ❤️</button>
+  </div>
+</section>
+
+<section id="heart" class="hidden">
+  <div class="heart-wrap" id="heartWrap">
+    <div class="heart-title">Un corazón para ti,<br>Raquel 💗</div>
+  </div>
+</section>
+
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+let stars=[];
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.scale(devicePixelRatio,devicePixelRatio);stars=Array.from({length:130},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.2,a:Math.random()}))}
+addEventListener('resize',resize);resize();
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const s of stars){s.a+=.01;ctx.globalAlpha=.35+.3*Math.sin(s.a);ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill()}requestAnimationFrame(draw)}draw();
+
+function next(id){
+ document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(id==='heart') buildHeart();
+}
+function buildHeart(){
+ const wrap=document.getElementById('heartWrap');
+ if(wrap.querySelector('.mini')) return;
+ const files=['https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=300&q=75','https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=300&q=75','https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=300&q=75','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=300&q=75','https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=75','https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=300&q=75'];
+ const n=18, size=wrap.clientWidth;
+ for(let i=0;i<n;i++){
+   const t=Math.PI*2*i/n;
+   const x=16*Math.pow(Math.sin(t),3);
+   const y=-(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t));
+   const el=document.createElement('div');el.className='mini';
+   el.style.left=(size/2+x*size/34-36)+'px';
+   el.style.top=(size/2+y*size/34-36)+'px';
+   el.style.animationDelay=(i*.08)+'s';
+   const img=document.createElement('img');img.src=files[i%files.length];
+   el.appendChild(img);wrap.appendChild(el);
+ }
+}
+</script>
+</body>
+</html>
