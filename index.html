@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumpleaños, Raquel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scene">
+    <!-- 3, 2, 1 -->
+    <section id="countdown" class="screen active">
+      <div class="count-number" id="number">3</div>
+    </section>
+
+    <!-- Saludo -->
+    <section id="greeting" class="screen">
+      <p class="small-line">3... 2... 1...</p>
+      <h1>¡Feliz cumpleaños,<br><span>Raquel!</span></h1>
+      <div class="mini-heart">♥</div>
+    </section>
+
+    <!-- Gatito -->
+    <section id="cat-screen" class="screen">
+      <div class="stars"></div>
+      <div class="cat-wrap">
+        <div class="cat">🐱</div>
+        <div class="cake">🎂</div>
+      </div>
+      <p class="cat-text">Hoy toca celebrar 🎉</p>
+      <button class="continue" id="openLetter">Abrir la carta</button>
+    </section>
+
+    <!-- Carta -->
+    <section id="letter-screen" class="screen letter-screen">
+      <div class="letter">
+        <div class="letter-top">
+          <span>Para Raquel</span>
+          <span>♥</span>
+        </div>
+
+        <div class="pages" id="pages">
+          <article class="page current">
+            <p>Y llegó el día en que cumples 18 años.</p>
+          </article>
+
+          <article class="page">
+            <p>De corazón, espero que hoy la pases muy bonito, rodeada de las personas que más quieres y que hacen especial tu vida.</p>
+          </article>
+
+          <article class="page">
+            <p>Deseo que esta nueva etapa venga acompañada de muchas sonrisas, momentos inolvidables y nuevas aventuras que algún día puedas recordar con mucho cariño.</p>
+          </article>
+
+          <article class="page">
+            <p>Espero que cada meta que tengas, poco a poco, se vaya cumpliendo, y que nunca te falten motivos para seguir adelante y disfrutar de cada pequeño momento.</p>
+          </article>
+
+          <article class="page">
+            <p>Disfruta mucho de tu día, porque te lo mereces.</p>
+          </article>
+
+          <article class="page">
+            <p>Y recuerda siempre lo especial que eres para mí.</p>
+          </article>
+
+          <article class="page final-page">
+            <p>Feliz cumpleaños, Raquel.</p>
+            <small>Que estos 18 sean apenas el comienzo de muchas cosas bonitas que todavía están por llegar.</small>
+          </article>
+        </div>
+
+        <div class="letter-bottom">
+          <span id="pageCount">1 / 7</span>
+          <span class="swipe-hint" id="hint">Desliza para continuar →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corazón final -->
+    <section id="final-screen" class="screen final-screen">
+      <div class="big-heart">♥</div>
+      <h2>Feliz cumpleaños, Raquel.</h2>
+      <p>Que tengas un día muy bonito.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
